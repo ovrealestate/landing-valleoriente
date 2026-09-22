@@ -21,3 +21,7 @@ Landing basada en la arquitectura visual de `landing-turquoise`, adaptada para l
 ```bash
 npx wrangler deploy
 ```
+
+
+## Importante para actualizar el URL actual
+Este paquete usa `name = "landing-valleoriente"` para sobrescribir el Worker existente `https://landing-valleoriente.ovrealestate.workers.dev/`. Ejecutar `npx wrangler deploy` desde esta carpeta.
