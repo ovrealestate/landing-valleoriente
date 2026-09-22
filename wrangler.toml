@@ -1,4 +1,4 @@
-name = "landing-valle-oriente-v2"
+name = "landing-valleoriente"
 main = "src/worker.js"
 compatibility_date = "2026-09-21"
 keep_vars = true
