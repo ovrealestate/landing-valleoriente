@@ -25,3 +25,16 @@ npx wrangler deploy
 
 ## Importante para actualizar el URL actual
 Este paquete usa `name = "landing-valleoriente"` para sobrescribir el Worker existente `https://landing-valleoriente.ovrealestate.workers.dev/`. Ejecutar `npx wrangler deploy` desde esta carpeta.
+
+
+## Ajuste V2.1
+- Se agregó separación correcta entre la franja de métricas y “A pocos minutos de Valle Oriente”.
+- Se corrigió el bloque de conectividad para desktop y mobile.
+- Se eliminaron los prefijos 01/02/03/04 y se convirtieron las categorías en chips limpios: Negocios, Gastronomía, Compras y Educación.
+
+
+## Ajustes v2.2
+- Se agregó slider automático de 4 imágenes en la sección de resumen del proyecto.
+- La primera imagen muestra el conjunto desde una vista más abierta/elevada.
+- Se incrementó el espacio superior en la franja “A pocos minutos de Valle Oriente”.
+- Se mantuvieron las correcciones previas del texto de categorías y del comportamiento mobile.
