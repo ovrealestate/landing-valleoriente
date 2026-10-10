@@ -6,3 +6,7 @@ keep_vars = true
 [assets]
 directory = "./public"
 binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+# Secrets: LEADS_SCRIPT_URL y LEADS_SCRIPT_TOKEN (nunca en public/).
+# Garantiza que el formulario sea procesado por el Worker.
