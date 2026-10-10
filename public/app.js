@@ -14,8 +14,10 @@ function setupLeadForm(){
  const status=document.getElementById('leadStatus'),button=form.querySelector('button[type=submit]');let eventId=null,busy=false;
  form.addEventListener('submit',async e=>{
   e.preventDefault();if(busy||!form.reportValidity())return;
-  const fields=Object.fromEntries(new FormData(form));const digits=fields.phone.replace(/\D/g,'');
-  if(digits.length<10||digits.length>15){status.textContent='Revisa tu teléfono: incluye al menos 10 dígitos.';status.dataset.error='true';return;}
+  const fields=Object.fromEntries(new FormData(form));const digits=fields.phone;
+  fields.email=fields.email.trim();
+  if(!/^[0-9]{10}$/.test(digits)){status.textContent='Escribe tu celular con exactamente 10 dígitos.';status.dataset.error='true';return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(fields.email)){status.textContent='Revisa tu correo: usa el formato nombre@dominio.com.';status.dataset.error='true';return;}
   busy=true;button.disabled=true;status.dataset.error='false';status.textContent='Enviando tu solicitud…';
   eventId=eventId||crypto.randomUUID();const tracking=readTracking();
   const payload={...tracking,...fields,consent:fields.consent==='on',meta_event_id:eventId,fbp:cookieValue('_fbp'),fbc:cookieValue('_fbc')||(tracking.fbclid?'fb.1.'+Date.now()+'.'+tracking.fbclid:''),page_url:location.origin+location.pathname};
