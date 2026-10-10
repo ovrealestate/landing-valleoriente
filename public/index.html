@@ -34,7 +34,7 @@
         <a href="#distribuciones">Distribuciones</a>
         <a href="#ubicacion">Ubicación</a>
       </nav>
-      <a class="nav-pill" href="#distribuciones">Ver opciones</a>
+      <a class="nav-pill" href="#contacto">Solicitar información</a>
     </div>
   </header>
 
@@ -48,7 +48,7 @@
           <p class="hero-price">Desde <strong>$5.8 MDP</strong></p>
           <p class="hero-details">1, 2 y 3 recámaras · 52 a 110 m²</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#distribuciones">Ver distribuciones</a>
+            <a class="btn btn-primary" href="#contacto">Recibir precios y disponibilidad</a>
             <a class="btn btn-ghost" href="#amenidades">Conocer amenidades</a>
           </div>
           <p class="hero-note">Precios y disponibilidad sujetos a cambio sin previo aviso.</p>
@@ -199,6 +199,24 @@
       </div>
     </section>
 
+
+    <section id="contacto" class="section lead-section">
+      <div class="container lead-layout">
+        <div><div class="eyebrow accent">Disponibilidad actual</div><h2>Encuentra tu departamento en Valle Oriente</h2><p>Déjanos tus datos para recibir precios, distribuciones y opciones disponibles.</p></div>
+        <form id="leadForm" class="lead-form" action="/api/lead" method="post">
+          <label>Nombre completo<input name="nombre_completo" autocomplete="name" minlength="2" maxlength="120" required></label>
+          <label>Teléfono / WhatsApp<input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="25" required placeholder="81 1234 5678"></label>
+          <label>Correo electrónico<input name="email" type="email" autocomplete="email" maxlength="160" required></label>
+          <label>¿Cuándo planeas comprar?<select name="plazo_compra" required><option value="">Selecciona una opción</option><option>Lo antes posible</option><option>En 1 a 3 meses</option><option>En 3 a 6 meses</option><option>Más de 6 meses</option></select></label>
+          <label>Recámaras<select name="recamaras" required><option value="">Selecciona una opción</option><option>1</option><option>2</option><option>3</option><option>Aún no lo sé</option></select></label>
+          <div class="lead-trap" aria-hidden="true"><label>Empresa<input name="company" tabindex="-1" autocomplete="off"></label></div>
+          <label class="lead-consent"><input type="checkbox" name="consent" required> <span>Acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener" data-preserve-tracking>Aviso de Privacidad</a> y que OV Real Estate me contacte para atender mi solicitud.</span></label>
+          <button class="btn btn-primary" type="submit">Solicitar información</button>
+          <p id="leadStatus" role="status" aria-live="polite"></p>
+          <noscript>Activa JavaScript para enviar tu solicitud.</noscript>
+        </form>
+      </div>
+    </section>
     <section class="closing-band">
       <div class="container closing-inner">
         <div><div class="eyebrow">Disponibilidad actual</div><h2>Conoce las opciones disponibles hoy.</h2></div>
